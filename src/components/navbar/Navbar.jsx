@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../assets/logo.svg';
 const ListItems = (props) => {
   return (
-    <li>
+    <li className="text-white ">
       <a href={props.name}>{props.menu}</a>
     </li>
   );
@@ -17,13 +17,13 @@ const Navbar = () => {
   return (
     <div className=" bg-black px-6 py-3 flex flex-row items-center  justify-between">
       <img className="cursor-pointer h-8" src={logo} alt="Hoobank Logo" />
-      <div className="flex gap-4">
-        <ul className="flex flex-row justify-evenly items-center text-white gap-5">
+      <div className="flex gap-6">
+        <ul className="flex flex-row justify-evenly items-center gap-4">
           {menu_Items.map((item) => (
             <ListItems key={item.id} menu={item.menu} name={item.name} />
           ))}
         </ul>
-        <button className="bg-teal-500 font-semibold rounded-lg px-3 py-2 border-solid">
+        <button className="bg-teal-400 font-semibold rounded-lg px-3 py-2 border-solid hover:bg-teal-600 hover:ease-in-out duration-300">
           Get Started
         </button>
       </div>
