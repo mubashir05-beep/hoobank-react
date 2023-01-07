@@ -14,7 +14,9 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react-scripts": "latest"
+    "react-router-dom": "^6.6.1",
+    "react-scripts": "latest",
+    "tailwindcss": "^3.2.4"
   },
   "browserslist": {
     "production": [
