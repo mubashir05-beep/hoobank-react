@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
+import { FiMenu,FiMinus } from "react-icons/fi";
 import './navbar.css'
+import { useState } from 'react';
 import { Outlet, Link } from "react-router-dom";
 const ListItems = (props) => {
   return (
@@ -19,15 +21,19 @@ const Navbar = () => {
     { id: 3, menu: "Product", name: "#product", link: "/product" },
     { id: 4, menu: "Client", name: "#client", link: "/client" },
   ];
+  const [toggle,setToggle]=useState(true);
+  const toggleMenu=()=>{
+    setToggle(!toggle);
+  }
   return (
     <>
       <div className=" navbar bg-black px-8 py-6 flex flex-row items-center justify-between">
         <img
-          className="cursor-pointer h-12"
+          className="logo cursor-pointer h-12"
           src={logo}
           alt="Hoobank Logo"
         />
-        <div className="flex right gap-6 ml-12">
+        <div className="right flex gap-6 ml-12">
           <ul className=" flex flex-row justify-evenly items-center gap-4 ">
             {menu_Items.map((item, index) => (
               <ListItems
@@ -41,6 +47,13 @@ const Navbar = () => {
           <button className="bg-teal-400 font-medium rounded-lg px-3 py-2 border-solid hover:bg-teal-600 hover:ease-in-out duration-300">
             Get Started
           </button>
+        </div>
+        <div className="burger" onClick={toggleMenu}>
+          {toggleMenu ? 
+            <FiMenu size="40px" color="white" />
+          : 
+            <FiMinus size="880px" color="white" />
+          }
         </div>
       </div>
       <Outlet />
