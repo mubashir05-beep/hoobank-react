@@ -1,3 +1,2 @@
-# hoobank-react
+# Hoobank-React
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-a5z3kv)
