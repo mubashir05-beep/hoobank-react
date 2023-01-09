@@ -1,0 +1,8 @@
+@media screen and (max-width:344px) {
+    .numberHead{
+        font-size: 1.9rem;
+    }
+    .NumberText{
+        font-size: 1rem;
+    }
+}

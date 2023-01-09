@@ -34,7 +34,7 @@ const Navbar = () => {
           src={logo}
           alt="Hoobank Logo"
         />
-        <div className="right flex gap-6 ml-12">
+        <div className="rightNavBar flex gap-6 ml-12">
           <ul className=" flex flex-row justify-evenly items-center gap-4 ">
             {menu_Items.map((item, index) => (
               <ListItems
